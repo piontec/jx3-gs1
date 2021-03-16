@@ -20,7 +20,7 @@ spec:
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: "5260w.k8s.ginger.eu-west-1.aws.gigantic.io"
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
