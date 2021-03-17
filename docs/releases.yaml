@@ -5,9 +5,15 @@
     description: A Helm chart for the resources for JX Boot
     home: https://github.com/jenkins-x-charts/jxboot-helmfile-resources
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
+    ingresses:
+    - name: bucketrepo
+      url: http://bucketrepo-jx.k3ee4.k8s.ginger.eu-west-1.aws.gigantic.io/
+    - name: hook
+      url: http://hook-jx.k3ee4.k8s.ginger.eu-west-1.aws.gigantic.io/hook
     name: jxboot-helmfile-resources
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jxboot-helmfile-resources
     version: 1.0.41
   - apiVersion: v2
     appVersion: 3.0.5
@@ -16,15 +22,21 @@
     name: jenkins-x-crds
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jenkins-x-crds
     version: 3.0.5
   - apiVersion: v1
     appVersion: latest
+    applicationUrl: http://dashboard-jx.k3ee4.k8s.ginger.eu-west-1.aws.gigantic.io
     description: Web UI for Jenkins X, with a clear goal - visualize the pipelines - and their logs.
     home: https://github.com/jenkins-x/jx-pipelines-visualizer
     icon: https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg
+    ingresses:
+    - name: jx-pipelines-visualizer
+      url: http://dashboard-jx.k3ee4.k8s.ginger.eu-west-1.aws.gigantic.io
     name: jx-pipelines-visualizer
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-pipelines-visualizer
     sources:
     - https://github.com/jenkins-x/jx-pipelines-visualizer
     version: 1.1.11
@@ -36,6 +48,7 @@
     name: jx-preview
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
+    resourcePath: config-root/namespaces/jx/jx-preview
     version: 0.0.168
   - apiVersion: v1
     appVersion: 0.0.939
@@ -46,6 +59,7 @@
     name: lighthouse
     repositoryName: jenkins-x
     repositoryUrl: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+    resourcePath: config-root/namespaces/jx/lighthouse
     version: 0.0.939
   - apiVersion: v1
     appVersion: 0.1.54
@@ -54,6 +68,7 @@
     name: bucketrepo
     repositoryName: jenkins-x
     repositoryUrl: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+    resourcePath: config-root/namespaces/jx/bucketrepo
     version: 0.1.54
   - apiVersion: v2
     appVersion: 3.0.0
@@ -66,6 +81,7 @@
     name: jx-build-controller
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-build-controller
     sources:
     - https://github.com/jenkins-x-plugins/jx-build-controller
     version: 0.0.34
@@ -76,6 +92,7 @@
     name: local-external-secrets
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/local-external-secrets
     version: 0.0.6
   - apiVersion: v2
     appVersion: 3.0.0
@@ -88,6 +105,72 @@
     name: jx-kh-check
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-kh-check-health-checks-jx
+    sources:
+    - https://github.com/jenkins-x-plugins/jx-kh-check
+    version: 0.0.56
+  - apiVersion: v2
+    appVersion: 2.2.0
+    description: An operator for synthetic test and monitoring.  Works great with Prometheus.
+    home: https://comcast.github.io/kuberhealthy/
+    icon: https://raw.githubusercontent.com/Comcast/kuberhealthy/master/images/logo-square.png
+    keywords:
+    - kuberhealthy
+    - kubernetes
+    - operator
+    - monitoring
+    - synthetic
+    - testing
+    - comcast
+    - health
+    - prometheus
+    maintainers:
+    - email: eric.greer@comcast.com
+      name: integrii
+    - email: jacob.martin@comcast.com
+      name: lolimjake
+    - email: ianhoegen@gmail.com
+      name: ihoegen
+    - email: jonathan_phan@comcast.com
+      name: jonnydawg
+    - email: joshulyne_park@comcast.com
+      name: joshulyne
+    name: kuberhealthy
+    repositoryName: kuberhealthy
+    repositoryUrl: https://comcast.github.io/kuberhealthy/helm-repos
+    resourcePath: config-root/namespaces/jx/kuberhealthy
+    sources:
+    - https://github.com/Comcast/kuberhealthy
+    - https://github.com/helm/charts/tree/master/stable/kuberhealthy
+    type: application
+    version: 2.2.0
+  - apiVersion: v2
+    appVersion: 3.0.0
+    description: Jenkins X next gen cloud CI / CD platform for Kubernetes
+    home: https://jenkins-x.io/
+    icon: https://jenkins-x.github.io/jenkins-x-website/img/profile.png
+    maintainers:
+    - email: jenkins-x@googlegroups.com
+      name: Jenkins X Team
+    name: jx-kh-check
+    repositoryName: jx3
+    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-kh-check
+    sources:
+    - https://github.com/jenkins-x-plugins/jx-kh-check
+    version: 0.0.56
+  - apiVersion: v2
+    appVersion: 3.0.0
+    description: Jenkins X next gen cloud CI / CD platform for Kubernetes
+    home: https://jenkins-x.io/
+    icon: https://jenkins-x.github.io/jenkins-x-website/img/profile.png
+    maintainers:
+    - email: jenkins-x@googlegroups.com
+      name: Jenkins X Team
+    name: jx-kh-check
+    repositoryName: jx3
+    repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/jx/jx-kh-check-health-checks-install
     sources:
     - https://github.com/jenkins-x-plugins/jx-kh-check
     version: 0.0.56
@@ -123,6 +206,7 @@
     name: kuberhealthy
     repositoryName: kuberhealthy
     repositoryUrl: https://comcast.github.io/kuberhealthy/helm-repos
+    resourcePath: config-root/namespaces/kuberhealthy/kuberhealthy
     sources:
     - https://github.com/Comcast/kuberhealthy
     - https://github.com/helm/charts/tree/master/stable/kuberhealthy
@@ -139,6 +223,7 @@
     name: jx-kh-check
     repositoryName: jx3
     repositoryUrl: https://storage.googleapis.com/jenkinsxio/charts
+    resourcePath: config-root/namespaces/kuberhealthy/jx-kh-check
     sources:
     - https://github.com/jenkins-x-plugins/jx-kh-check
     version: 0.0.56
@@ -162,6 +247,7 @@
     name: ingress-nginx
     repositoryName: ingress-nginx
     repositoryUrl: https://kubernetes.github.io/ingress-nginx
+    resourcePath: config-root/namespaces/nginx/ingress-nginx-nginx-ingress
     sources:
     - https://github.com/kubernetes/ingress-nginx
     type: application
@@ -177,4 +263,5 @@
     name: tekton-pipeline
     repositoryName: cdf
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
+    resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
     version: 0.21.1
