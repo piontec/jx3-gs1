@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        piontec/jx3-gohttp-gs2: true
         piontec/jx3-gs1: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        piontec/jx3-gohttp-gs2: merge
         piontec/jx3-gs1: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - piontec/jx3-gs1
+        - piontec/jx3-gohttp-gs2
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - piontec/jx3-gs1
+        - piontec/jx3-gohttp-gs2
       target_url: http://dashboard-jx.k3ee4.k8s.ginger.eu-west-1.aws.gigantic.io
 kind: ConfigMap
 metadata:
