@@ -226,7 +226,7 @@
     resourcePath: config-root/namespaces/kuberhealthy/jx-kh-check
     sources:
     - https://github.com/jenkins-x-plugins/jx-kh-check
-    version: 0.0.56
+    version: 0.0.57
 - namespace: tekton-pipelines
   path: helmfiles/tekton-pipelines/helmfile.yaml
   releases:
