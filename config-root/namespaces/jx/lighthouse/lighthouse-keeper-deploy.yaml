@@ -24,6 +24,8 @@ spec:
     metadata:
       annotations:
         ad.datadoghq.com/keeper.logs: '[{"source":"lighthouse","service":"keeper"}]'
+        prometheus.io/port: "9090"
+        prometheus.io/scrape: "true"
         jenkins-x.io/hash: '393e46b493d4d6dbc94a78b0d4bd67d03715447ddf594b20fbe9d47cea26f362'
       labels:
         app: lighthouse-keeper
@@ -32,7 +34,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: lighthouse-keeper
-          image: gcr.io/jenkinsxio/lighthouse-keeper:0.0.0-PR-1254-5-SNAPSHOT
+          image: gcr.io/jenkinsxio/lighthouse-keeper:0.0.0-PR-1254-2-SNAPSHOT
           imagePullPolicy: IfNotPresent
           args:
             - "--namespace=jx"

@@ -24,10 +24,16 @@ spec:
       labels:
         app: kuberhealthy
     spec:
+      volumes:
+        - name: config-volume
+          configMap:
+            # Provide the name of the ConfigMap containing the files you want
+            # to add to the container
+            name: kuberhealthy
       serviceAccountName: kuberhealthy
       automountServiceAccountToken: true
       containers:
-        - image: kuberhealthy/kuberhealthy:v2.2.0
+        - image: kuberhealthy/kuberhealthy:v2.4.0
           command: [/app/kuberhealthy]
           ports:
             - containerPort: 8080
@@ -46,6 +52,9 @@ spec:
               port: 8080
             timeoutSeconds: 1
           name: kuberhealthy
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config/
           env:
             - name: POD_NAME
               valueFrom:
@@ -67,5 +76,8 @@ spec:
             requests:
               cpu: 400m
               memory: 300Mi
+            limits:
+              cpu: 2
+              memory: 1Gi
       restartPolicy: Always
       terminationGracePeriodSeconds: 60
