@@ -1,0 +1,8 @@
+# Source: jx3-gohttp-gs2/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jx3-gohttp-gs2-jx3-gohttp-gs2
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
