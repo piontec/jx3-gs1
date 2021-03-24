@@ -39,7 +39,7 @@
     resourcePath: config-root/namespaces/jx/jx-pipelines-visualizer
     sources:
     - https://github.com/jenkins-x/jx-pipelines-visualizer
-    version: 1.1.11
+    version: 1.2.0
   - apiVersion: v1
     description: |
       This chart installs the jx-preview CRD and garbagecollection job
@@ -49,7 +49,7 @@
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx/jx-preview
-    version: 0.0.168
+    version: 0.0.171
   - apiVersion: v1
     appVersion: 0.0.939
     description: |
@@ -84,7 +84,7 @@
     resourcePath: config-root/namespaces/jx/jx-build-controller
     sources:
     - https://github.com/jenkins-x-plugins/jx-build-controller
-    version: 0.0.34
+    version: 0.1.0
   - apiVersion: v2
     appVersion: 0.0.6
     description: Local External Secrets
@@ -110,8 +110,8 @@
     - https://github.com/jenkins-x-plugins/jx-kh-check
     version: 0.0.56
   - apiVersion: v2
-    appVersion: 2.2.0
-    description: An operator for synthetic test and monitoring.  Works great with Prometheus.
+    appVersion: v2.4.0
+    description: An operator for synthetic test and monitoring. Works great with Prometheus.
     home: https://comcast.github.io/kuberhealthy/
     icon: https://raw.githubusercontent.com/Comcast/kuberhealthy/master/images/logo-square.png
     keywords:
@@ -141,9 +141,9 @@
     resourcePath: config-root/namespaces/jx/kuberhealthy
     sources:
     - https://github.com/Comcast/kuberhealthy
-    - https://github.com/helm/charts/tree/master/stable/kuberhealthy
+    - https://github.com/Comcast/kuberhealthy/tree/master/deploy/helm/kuberhealthy
     type: application
-    version: 2.2.0
+    version: "54"
   - apiVersion: v2
     appVersion: 3.0.0
     description: Jenkins X next gen cloud CI / CD platform for Kubernetes
@@ -158,7 +158,7 @@
     resourcePath: config-root/namespaces/jx/jx-kh-check
     sources:
     - https://github.com/jenkins-x-plugins/jx-kh-check
-    version: 0.0.56
+    version: 0.0.58
   - apiVersion: v2
     appVersion: 3.0.0
     description: Jenkins X next gen cloud CI / CD platform for Kubernetes
@@ -173,13 +173,13 @@
     resourcePath: config-root/namespaces/jx/jx-kh-check-health-checks-install
     sources:
     - https://github.com/jenkins-x-plugins/jx-kh-check
-    version: 0.0.56
+    version: 0.0.58
 - namespace: kuberhealthy
   path: helmfiles/kuberhealthy/helmfile.yaml
   releases:
   - apiVersion: v2
-    appVersion: 2.2.0
-    description: An operator for synthetic test and monitoring.  Works great with Prometheus.
+    appVersion: v2.4.0
+    description: An operator for synthetic test and monitoring. Works great with Prometheus.
     home: https://comcast.github.io/kuberhealthy/
     icon: https://raw.githubusercontent.com/Comcast/kuberhealthy/master/images/logo-square.png
     keywords:
@@ -209,9 +209,9 @@
     resourcePath: config-root/namespaces/kuberhealthy/kuberhealthy
     sources:
     - https://github.com/Comcast/kuberhealthy
-    - https://github.com/helm/charts/tree/master/stable/kuberhealthy
+    - https://github.com/Comcast/kuberhealthy/tree/master/deploy/helm/kuberhealthy
     type: application
-    version: 2.2.0
+    version: "54"
   - apiVersion: v2
     appVersion: 3.0.0
     description: Jenkins X next gen cloud CI / CD platform for Kubernetes
@@ -226,12 +226,12 @@
     resourcePath: config-root/namespaces/kuberhealthy/jx-kh-check
     sources:
     - https://github.com/jenkins-x-plugins/jx-kh-check
-    version: 0.0.57
+    version: 0.0.58
 - namespace: tekton-pipelines
   path: helmfiles/tekton-pipelines/helmfile.yaml
   releases:
   - apiVersion: v1
-    appVersion: 0.21.0
+    appVersion: 0.22.0
     description: A Helm chart for Tekton Pipelines
     home: https://github.com/cdfoundation/tekton-helm-chart
     icon: https://avatars2.githubusercontent.com/u/47602533
@@ -239,4 +239,4 @@
     repositoryName: cdf
     repositoryUrl: https://cdfoundation.github.io/tekton-helm-chart
     resourcePath: config-root/namespaces/tekton-pipelines/tekton-pipeline
-    version: 0.21.1
+    version: 0.22.0
