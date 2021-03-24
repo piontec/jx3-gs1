@@ -11,13 +11,13 @@ repositories:
   url: https://storage.googleapis.com/jenkinsxio/charts
 releases:
 - chart: kuberhealthy/kuberhealthy
-  version: 2.2.0
+  version: "54"
   name: kuberhealthy
   values:
   - ../../versionStream/charts/kuberhealthy/kuberhealthy/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jx3/jx-kh-check
-  version: 0.0.57
+  version: 0.0.58
   name: jx-kh-check
   values:
   - ../../versionStream/charts/jx3/jx-kh-check/values.yaml.gotmpl

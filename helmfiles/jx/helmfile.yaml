@@ -27,13 +27,13 @@ releases:
   - ../../versionStream/charts/jx3/jenkins-x-crds/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jx3/jx-pipelines-visualizer
-  version: 1.1.11
+  version: 1.2.0
   name: jx-pipelines-visualizer
   values:
   - ../../versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jxgh/jx-preview
-  version: 0.0.168
+  version: 0.0.171
   name: jx-preview
   values:
   - jx-values.yaml
@@ -50,7 +50,7 @@ releases:
   - ../../versionStream/charts/jenkins-x/bucketrepo/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jx3/jx-build-controller
-  version: 0.0.34
+  version: 0.1.0
   name: jx-build-controller
   values:
   - ../../versionStream/charts/jx3/jx-build-controller/values.yaml.gotmpl
@@ -67,21 +67,21 @@ releases:
   - ../../versionStream/charts/jx3/health-checks-jx/values.yaml.gotmpl
   - jx-values.yaml
 - chart: kuberhealthy/kuberhealthy
-  version: 2.2.0
+  version: "54"
   name: kuberhealthy
   namespace: jx
   values:
   - ../../versionStream/charts/kuberhealthy/kuberhealthy/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jx3/jx-kh-check
-  version: 0.0.56
+  version: 0.0.58
   name: jx-kh-check
   namespace: jx
   values:
   - ../../versionStream/charts/jx3/jx-kh-check/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jx3/jx-kh-check
-  version: 0.0.56
+  version: 0.0.58
   name: health-checks-install
   namespace: jx
   values:
