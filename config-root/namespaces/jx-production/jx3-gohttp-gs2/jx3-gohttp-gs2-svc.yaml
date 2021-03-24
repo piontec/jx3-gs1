@@ -1,0 +1,18 @@
+# Source: jx3-gohttp-gs2/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: jx3-gohttp-gs2
+  labels:
+    chart: "jx3-gohttp-gs2-0.0.1"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-production
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    app: jx3-gohttp-gs2-jx3-gohttp-gs2

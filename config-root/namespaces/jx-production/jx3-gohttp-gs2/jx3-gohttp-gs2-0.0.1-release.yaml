@@ -1,0 +1,99 @@
+# Source: jx3-gohttp-gs2/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-03-24T11:21:10Z"
+  deletionTimestamp: null
+  name: 'jx3-gohttp-gs2-0.0.1'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.1
+      sha: 458053cfdec104da26d3527596153e4a5e52a2e0
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: 57c9c78a63e4ad9c1c3f7ead595a686a5178cf89
+    - author:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      branch: master
+      committer:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      message: |
+        fake commit
+      sha: 2459e491415cce4ffb5f6966fa38ddfaee788753
+    - author:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      branch: master
+      committer:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      message: |
+        fake commit
+      sha: 88faadfff20e502c49127bf2a077537e7214e005
+    - author:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      branch: master
+      committer:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      message: |
+        fake commit
+      sha: b9337efaac4909ea38c3b42e7c3298b6e1b15c75
+    - author:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      branch: master
+      committer:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      message: |
+        fake commit
+      sha: e16f8e2c5b462f886c1f283697d6f9ac746b1d37
+    - author:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      branch: master
+      committer:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      message: |
+        new commit 1
+      sha: 106428b10a4e6f984d4b2948ad39692fd676bab6
+    - author:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      branch: master
+      committer:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      message: |
+        chore: Jenkins X build pack
+      sha: e0ded9b544537a5a29771228e6fc82db82bba375
+  gitHttpUrl: https://github.com/piontec/jx3-gohttp-gs2
+  gitOwner: piontec
+  gitRepository: jx3-gohttp-gs2
+  name: 'jx3-gohttp-gs2'
+  releaseNotesURL: https://github.com/piontec/jx3-gohttp-gs2/releases/tag/v0.0.1
+  version: v0.0.1
+status: {}
