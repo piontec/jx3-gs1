@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: jx3-gohttp-gs2
   labels:
-    chart: "jx3-gohttp-gs2-0.0.1"
+    chart: "jx3-gohttp-gs2-0.0.2"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
 spec:

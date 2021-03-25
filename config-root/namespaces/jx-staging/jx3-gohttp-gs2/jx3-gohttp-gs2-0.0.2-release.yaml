@@ -1,0 +1,49 @@
+# Source: jx3-gohttp-gs2/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2021-03-25T14:20:23Z"
+  deletionTimestamp: null
+  name: 'jx3-gohttp-gs2-0.0.2'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: release 0.0.2
+      sha: f3baf789539933647c8deb542f5f1b4cd6dc996b
+    - author:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      branch: master
+      committer:
+        email: jenkins-x@googlegroups.com
+        name: jenkins-x-bot
+      message: |
+        chore: add variables
+      sha: d7dbe622f2a68a2a8be4405fea6e222b932b3b8c
+    - author:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      branch: master
+      committer:
+        email: piontec@gmail.com
+        name: Łukasz Piątkowski
+      message: |
+        new feature 2
+      sha: 5638b7697213def69a0ee2f5ea89314d42e2aae2
+  gitHttpUrl: https://github.com/piontec/jx3-gohttp-gs2
+  gitOwner: piontec
+  gitRepository: jx3-gohttp-gs2
+  name: 'jx3-gohttp-gs2'
+  releaseNotesURL: https://github.com/piontec/jx3-gohttp-gs2/releases/tag/v0.0.2
+  version: v0.0.2
+status: {}
