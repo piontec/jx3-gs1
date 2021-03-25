@@ -9,7 +9,7 @@ repositories:
   url: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
 releases:
 - chart: dev/jx3-gohttp-gs2
-  version: 0.0.1
+  version: 0.0.2
   name: jx3-gohttp-gs2
   values:
   - jx-values.yaml
